@@ -97,10 +97,34 @@ def news():
         {'title': 'Global warming', 'excerpt': 'Scientists can not find prove of global warming', 'date': '01.01.1999'}
     ]
     context = {
-        'news': _news,
+        'newses': _news,
         'title': 'Global news'
     }
     return render_template('news.html', **context)
+
+
+# Задание No8
+# 📌 Создать базовый шаблон для всего сайта, содержащий общие элементы дизайна
+# (шапка, меню, подвал), и дочерние шаблоны для каждой отдельной страницы.
+# 📌 Например, создать страницу "О нас" и "Контакты", используя базовый шаблон.
+@app.route('/contact/')
+def contactbase():
+    context = {
+        'title': 'Contact',
+        'name': 'James',
+        'surname': 'Willson',
+        'telephone': '+8800 131 32 43'
+    }
+    return render_template('contact.html', **context)
+
+
+@app.route('/aboutus/')
+def about_us():
+    context = {
+        'title': 'About',
+        'text': 'Ab accusamus delectus et expedita id iste, laboriosam optio quam, recusandae sed veritatis voluptate! Accusamus blanditiis debitis et tempora. Ab architecto asperiores aut consequuntur distinctio earum iusto nihil, non odit quidem soluta veniam.'
+    }
+    return render_template('about-us.html', **context)
 
 
 if __name__ == '__main__':
