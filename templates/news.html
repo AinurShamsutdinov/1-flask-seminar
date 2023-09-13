@@ -2,15 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{{ Title }}</title>
 </head>
 <body>
-    {% for news in newses %}
-    <tr>
-        <td>{{ news.title }}</td>
-        <td>{{ news.excerpt }}</td>
-        <td>{{ news.date }}</td>
-    </tr>
-    {% endfor %}
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Excerpt</th>
+            <th>Date</th>
+        </tr>
+        {% for news in newses %}
+        <tr>
+            <td>{{ news.title }}</td>
+            <td>{{ news.excerpt }}</td>
+            <td>{{ news.date }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
 </body>
 </html>
