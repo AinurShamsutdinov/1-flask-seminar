@@ -109,22 +109,12 @@ def news():
 # 📌 Например, создать страницу "О нас" и "Контакты", используя базовый шаблон.
 @app.route('/contact/')
 def contactbase():
-    context = {
-        'title': 'Contact',
-        'name': 'James',
-        'surname': 'Willson',
-        'telephone': '+8800 131 32 43'
-    }
-    return render_template('contact.html', **context)
+    return render_template('contact.html')
 
 
 @app.route('/aboutus/')
 def about_us():
-    context = {
-        'title': 'About',
-        'text': 'Ab accusamus delectus et expedita id iste, laboriosam optio quam, recusandae sed veritatis voluptate! Accusamus blanditiis debitis et tempora. Ab architecto asperiores aut consequuntur distinctio earum iusto nihil, non odit quidem soluta veniam.'
-    }
-    return render_template('about-us.html', **context)
+    return render_template('about-us.html')
 
 
 if __name__ == '__main__':
