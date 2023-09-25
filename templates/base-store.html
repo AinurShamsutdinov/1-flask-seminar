@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<!--<meta charset="utf-8">-->
+<meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
+   <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+   <title>
+       {% block title %}
+
+       {% endblock %}
+   </title>
+</head>
+<body>
+<div class="container-fluid">
+    <ul class="nav nav-pills justify-content-end align-items-end">
+        <li class="nav-item"><a href="/clothing/" class="nav-link">Clothing</a></li>
+        <li class="nav-item"><a href="/electronics/" class="nav-link">Electronics</a></li>
+        <li class="nav-item"><a href="/food/" class="nav-link">Food</a></li>
+    </ul>
+    {% block content %}
+
+    {% endblock %}
+</div>
+<script src="/static/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
